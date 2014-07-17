@@ -22,7 +22,7 @@ router.get('/', function(req, res) {
 
 console.log('Setting user routes');
 router.route('/users')
-    .get(authController.isAuthenticated, userController.list)
+    .get(userController.list)
     .post(userController.create);
 
 router.route('/users/:user_id')
