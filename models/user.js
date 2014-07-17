@@ -5,7 +5,8 @@ var UserSchema = new mongoose.Schema({
     firstName:    { type: String, required: 'First name is required' },
     middleName:   { type: String, required: false },
     lastName:     { type: String, required: 'Last name is required' },
-    primaryEmail: { type: String, required: 'Primary email is required', unique: true },
+    primaryEmail: { type: String, required: 'Primary email is required', 
+                    index: true, unique: true },
     password:     { type: String, required: 'Password is required' }
 });
 
