@@ -6,12 +6,12 @@ exports.create = function(req, res) {
     middleName: req.body.middleName,
     lastName: req.body.lastName,  
     primaryEmail: req.body.primaryEmail,
-    password: req.body.primaryEmail
+    password: req.body.password
   });
 
   user.save(function(err) {
     if (err) {
-      res.send(400, err);
+      res.json(400, err);
       return;
     }
 
@@ -23,7 +23,7 @@ exports.create = function(req, res) {
 exports.list = function(req, res) {
   User.find(function(err, users) {
     if (err) {
-      res.send(400, err);
+      res.json(400, err);
       return;
     }
 
@@ -34,7 +34,7 @@ exports.list = function(req, res) {
 exports.get = function(req, res) {
   User.findById(req.params.user_id, function(err, beer) {
     if (err) {
-      res.send(400, err);
+      res.json(400, err);
       return;
     }
 
@@ -45,7 +45,7 @@ exports.get = function(req, res) {
 exports.update = function(req, res) {
   User.findById(req.params.user_id, function(err, user) {
     if (err) {
-      res.send(400, err);
+      res.json(400, err);
       return;
     }
 
@@ -57,7 +57,7 @@ exports.update = function(req, res) {
 
     user.save(function(err) {
         if (err) {
-          res.send(400, err);
+          res.json(400, err);
           return;
         }
 
@@ -66,13 +66,13 @@ exports.update = function(req, res) {
   });
 };
 
-exports.delete = function(req, res) {
+exports.remove = function(req, res) {
   User.findByIdAndRemove(req.params.user_id, function(err) {
     if (err) {
-      res.send(400, err);
+      res.json(400, err);
       return;
     }
 
-    res.json({ message: 'User ' + req.params.user_id + ' removed from the locker!' });
+    res.json({ message: 'User ' + req.params.user_id + ' removed' });
   });
 };
