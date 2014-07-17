@@ -1,0 +1,29 @@
+{
+  "name": "talentjs",
+  "version": "0.0.0",
+  "description": "Talent NodeJS API Service",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.6.1",
+    "mongoose": "~3.8.13",
+    "body-parser": "~1.4.3",
+    "bcrypt-nodejs": "0.0.3",
+    "passport": "~0.2.0",
+    "passport-http": "~0.2.2",
+    "morgan": "~1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feder1402/talentjs.git"
+  },
+  "author": "Federico Raggi <federicoraggi@hotmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/feder1402/talentjs/issues"
+  }
+}
