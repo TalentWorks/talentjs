@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var morgan = require('morgan');
@@ -7,8 +8,8 @@ var userController = require('./controllers/user');
 var authController = require('./controllers/auth');
 
 console.log('Connecting to database');
-var host = process.env.IP || 'localhost';
-mongoose.connect('mongodb://' + host, function(err) {
+var mongodb = process.env.MONGODB || 'localhost';
+mongoose.connect('mongodb://' + mongodb, function(err) {
   if (err) {
     throw err;
   }
@@ -34,6 +35,7 @@ router.route('/users/:user_id')
 console.log('Setting middleware');
 var app = express();
 app.use(morgan('dev'));
+app.use('/api', cors());
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json());
 app.use(passport.initialize());
