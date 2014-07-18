@@ -26,3 +26,7 @@ node_modules
 
 # Data directory
 data
+
+# IntelliJ Project Files and Folders
+.idea
+.iml
