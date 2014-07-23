@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var morgan = require('morgan');
 var passport = require('passport');
 var userController = require('./controllers/user');
-var authController = require('./controllers/auth');
+var authController = require('./auth/localStrategy');
 
 console.log('Connecting to database');
 var mongodb = process.env.MONGODB || 'localhost';
@@ -28,9 +28,9 @@ router.route('/users')
   .post(userController.create);
 
 router.route('/users/:user_id')
-	.delete(authController.isAuthenticated, userController.remove)
+  .delete(authController.isAuthenticated, userController.remove)
   .get(authController.isAuthenticated, userController.get)
-	.put(authController.isAuthenticated, userController.update);
+  .put(authController.isAuthenticated, userController.update);
 
 console.log('Setting middleware');
 var app = express();
