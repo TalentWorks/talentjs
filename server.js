@@ -20,6 +20,7 @@ mongoose.connect('mongodb://' + mongodb, function(err) {
 console.log('Setting routes');
 var app = express();
 app.enable('strict routing');
+app.enable('case sensitive routing');
 
 var apiRouter = express.Router({
   caseSensitive: app.get('case sensitive routing'),
@@ -74,8 +75,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.set('view engine', 'ejs');
-app.use('/api/', apiRouter);
-app.use('/client/', clientRouter);
+app.use('/api', apiRouter);
+app.use('/client', clientRouter);
 app.use(slash());
 
 // Listen
