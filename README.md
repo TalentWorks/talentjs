@@ -3,6 +3,8 @@ REST API server for talent clients
 
 ## Authentication
 Some API calls require clients to provide authentication using HTTP Basic authentication.
+
+    Authorization: Basic <token>
  
 ## Get list of all users
 **Request**
