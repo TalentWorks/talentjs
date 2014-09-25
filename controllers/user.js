@@ -32,7 +32,7 @@ exports.list = function(req, res) {
 };
 
 exports.get = function(req, res) {
-  User.findById(req.params.user_id, function(err, beer) {
+  User.findById(req.params.user_id, '-password', {lean: true}, function(err, beer) {
     if (err) {
       res.json(400, err);
       return;
