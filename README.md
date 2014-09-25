@@ -30,9 +30,10 @@ Some API calls require clients to provide authentication using HTTP Basic authen
       ... additional results ...
     ]
     
-Requires Auth? Yes
 
-***Note:*** This call is for debugging only and is NOT supported on a production environment 
+**Notes**
+- This call requires authentication
+- This call is for debugging only and is NOT supported on a production environment 
 
 ## Get user details
 
@@ -52,3 +53,4 @@ Requires Auth? Yes
       "__v":0
     }
 
+**Notes**
