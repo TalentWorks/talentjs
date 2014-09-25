@@ -5,10 +5,12 @@ REST API server for talent clients
 Some API calls require clients to provide authentication using HTTP Basic authentication.
  
 ## Get list of all users
-    **Request**
+**Request**
+
     GET /api/users
     
-    **Response**
+**Response**
+
     HTTP 200
     [
       {
@@ -34,10 +36,12 @@ Requires Auth? Yes
 
 ## Get user details
 
-    ***Request***
-    GET /api/users/
+**Request**
+
+    GET /api/users/53c8242710cb6fc813dac19d
     
-    ***Response***
+**Response**
+
     HTTP 200
     
     {
