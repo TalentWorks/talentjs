@@ -32,8 +32,13 @@ Some API calls require clients to provide authentication using HTTP Basic authen
     
 
 **Notes**
-- This call requires authentication
-- This call is for debugging only and is NOT supported on a production environment 
+
+- Requires authentication
+- Use for debugging only; it will NOT be supported on a production environment
+
+**Known Issues**
+
+- Requests with a '/' appended at the end of the path (/api/users/) will fail instead of being redirected to /api/users  
 
 ## Get user details
 
@@ -52,5 +57,25 @@ Some API calls require clients to provide authentication using HTTP Basic authen
       "primaryEmail":"isa@email.com",
       "__v":0
     }
+
+**Notes**
+
+- Requires authentication
+
+## Create a new user
+**Request**
+
+    POST /api/users
+    
+    {
+      "firstName":"User",
+      "lastName":"JoseUser",
+      "primaryEmail":"JoseUser@email.com",
+      "password":"hello"
+    }
+    
+**Response**
+
+    HTTP 201
 
 **Notes**
