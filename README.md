@@ -1,6 +1,9 @@
 # TalentJS
 REST API server for talent clients
 
+*The TalentJS API project is still on an early and immature state. Therefore, the interface 
+exposed by the API will evolve. Expect frequent changes that, in some cases, will break existing code.*   
+
 ## Authentication
 Some API calls require clients to provide authentication using HTTP Basic authentication.
 
