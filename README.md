@@ -5,7 +5,7 @@ REST API server for talent clients
 Some API calls require clients to provide authentication using HTTP Basic authentication.
 
     Authorization: Basic <token>
- 
+
 ## Get list of all users
 **Request**
 
@@ -81,3 +81,27 @@ Some API calls require clients to provide authentication using HTTP Basic authen
     HTTP 201
 
 **Notes**
+
+## Update a user's properties or change its password
+**Request**
+
+    PUT /api/users
+    
+    {
+      "firstName":"User",
+      "lastName":"JoseUser",
+      "primaryEmail":"JoseUser@email.com",
+      "password":"hello"
+    }
+    
+**Response**
+
+    HTTP 200
+
+**Notes**
+
+- Requires authentication
+- Only properties included on the request will be modified
+- Password can be changed by providing a new value
+
+
