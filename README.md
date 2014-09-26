@@ -5,11 +5,24 @@ REST API server for talent clients
 exposed by the API will evolve. Expect frequent changes that, in some cases, will break existing code.*   
 
 ## Running locally
-You need a mongodb instance running somewhere before starting the talent server. By default, the talent server will connect to mongodb default port (27017) on the local machine ( localhost). 
+
+### Steps
+
+Verify all dependencies are present:
+
+    npm install
+  
+Start a local instance of mongodb running on the default port (27017) (See notes):
+
+    mongodb
+
+Run nodejs:
+
+    node server.js
 
 ### Notes
 
-- Mongodb's location is not configurable yet. Allowing specifying an alternate location for mongodb in the configuration is TBD. 
+- You need a mongodb instance running somewhere before starting the talent server. Mongodb's location is not configurable yet so you need to run mongodb on the local machine (localhost) and using mongodb's default port (27017). Making mongodb's location configurable is TBD. 
 
 ## Authentication
 Some API calls require clients to provide authentication using HTTP Basic authentication.
