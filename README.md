@@ -31,7 +31,7 @@ Some API calls require clients to provide authentication using HTTP Basic authen
 
     Authorization: Basic <token>
     
-Where *<token>* contains the Base64 encoded user's credentials (See [RFC 2617] (http://tools.ietf.org/html/rfc2617) for details)
+Where *&lt;token>* contains the Base64 encoded user's credentials (See [RFC 2617] (http://tools.ietf.org/html/rfc2617) for details)
 
 ## Get list of all users
 **Request**
