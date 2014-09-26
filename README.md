@@ -131,4 +131,16 @@ Where *&lt;token>* contains the Base64 encoded user's credentials (See [RFC 2617
 - Only properties included on the request will be modified
 - Password can be changed by providing a new value
 
+## Delete a user
+**Request**
+
+    DELETE /api/users
+**Response**
+
+    HTTP 204
+
+**Notes**
+
+- Requires authentication
+
 
