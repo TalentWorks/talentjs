@@ -16,9 +16,11 @@ Start a local instance of mongodb running on the default port (27017) (See notes
 
     mongodb
 
-Run nodejs:
+Start the talent server:
 
     node server.js
+    
+By default, the server will listen on port 8080. Set the PORT environment variable to specify a different port.
 
 ### Notes
 
@@ -28,6 +30,8 @@ Run nodejs:
 Some API calls require clients to provide authentication using HTTP Basic authentication.
 
     Authorization: Basic <token>
+    
+Where <token> contains the Base64 encoded user's credentials (See [RFC 2617] (http://tools.ietf.org/html/rfc2617) for details)
 
 ## Get list of all users
 **Request**
