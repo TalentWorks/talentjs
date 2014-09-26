@@ -24,7 +24,7 @@ By default, the server will listen on port 8080. Set the PORT environment variab
 
 ### Notes
 
-- You need a mongodb instance running somewhere before starting the talent server. By default, talent will connect to the local mongodb instance (mongodb://localhost). To specify a different location for your mongodb server, use the MONGODB environment variable. 
+- You need to have a running mongodb instance before the talent server is started. By default, talent will connect to the local mongodb instance (mongodb://localhost). To specify a different location for your mongodb server, use the MONGODB environment variable. 
 
 ## Authentication
 Some API calls require clients to provide authentication using HTTP Basic authentication.
