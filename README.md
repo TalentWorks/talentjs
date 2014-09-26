@@ -67,7 +67,7 @@ Where *&lt;token>* contains the Base64 encoded user's credentials (See [RFC 2617
 
 **Known Issues**
 
-- Requests with a '/' appended at the end of the path (/api/users/) will fail instead of being redirected to /api/users  
+- There is an open bug that causes requests with a '/' appended at the end of the path (/api/users/) to fail instead of being redirected to /api/users 
 
 ## Get user details
 
@@ -112,7 +112,7 @@ Where *&lt;token>* contains the Base64 encoded user's credentials (See [RFC 2617
 ## Update a user's properties or change its password
 **Request**
 
-    PUT /api/users
+    PUT /api/users/53c8242710cb6fc813dac19d
     
     {
       "firstName":"User",
@@ -134,7 +134,7 @@ Where *&lt;token>* contains the Base64 encoded user's credentials (See [RFC 2617
 ## Delete a user
 **Request**
 
-    DELETE /api/users
+    DELETE /api/users/53c8242710cb6fc813dac19d
 **Response**
 
     HTTP 204
